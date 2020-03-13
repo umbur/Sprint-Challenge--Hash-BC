@@ -24,7 +24,9 @@ This sprint challenge is divided up into three parts:  Hash tables coding, block
 
 Explain in detail the workings of a dynamic array:
 * What is the runtime complexity to access an array, add or remove from the front, and add or remove from the back?
+A: O(1)
 * What is the worse case scenario if you try to extend the storage size of a dynamic array?
+A: the blockchain is a decentralized distributed database (chain) of immutable records (blocks), similar to a linked list. Basically, each "block" contains transaction data (a timestamp, transaction history), proof (for later validation of proof-of-work used to mine the block), an index, and a sha256 hashed pointer to the previous block.) What makes the chain so secure, is that you cannot remove or change any block without also altering the hashes.
 
 Explain how a blockchain is structured. What are the blocks, what is the chain? How is the data organized?
  
