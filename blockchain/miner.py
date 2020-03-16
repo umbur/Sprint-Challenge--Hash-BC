@@ -25,6 +25,12 @@ def proof_of_work(last_proof):
     print("Searching for next proof")
     proof = 0
     #  TODO: Your code here
+    proof = random.SystemRandom().randint(-26666666666, -13333333333)
+
+    last_hash = hashlib.sha256(str(last_proof).encode()).hexdigest()
+
+    while not valid_proof(last_hash, proof):
+        proof += 1
 
     print("Proof found: " + str(proof) + " in " + str(timer() - start))
     return proof
