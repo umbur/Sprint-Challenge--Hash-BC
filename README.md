@@ -24,11 +24,16 @@ This sprint challenge is divided up into three parts:  Hash tables coding, block
 
 Explain in detail the workings of a dynamic array:
 * What is the runtime complexity to access an array, add or remove from the front, and add or remove from the back?
-* What is the worse case scenario if you try to extend the storage size of a dynamic array?
+A: Access an array: O(1); Add or remove from front: O(n); Add or remove from the back: O(n)
 
-Explain how a blockchain is structured. What are the blocks, what is the chain? How is the data organized?
+* What is the worse case scenario if you try to extend the storage size of a dynamic array?
+A: The worst case scenario is that the space is full and you need to resize the array. Which means that you would need to create a new array, then copy the content of the original array into the new array and double the size to create more space for data. I think that would be O(n)
+
+* Explain how a blockchain is structured. What are the blocks, what is the chain? How is the data organized?
+A: the blockchain is a decentralized distributed database (chain) of immutable records (blocks), similar to a linked list. Basically, each "block" contains transaction data (a timestamp, transaction history), proof (for later validation of proof-of-work used to mine the block), an index, and a sha256 hashed pointer to the previous block.) What makes the chain so secure, is that you cannot remove or change any block without also altering the hashes.
  
-Explain how proof of work functions. How does it operate. How does this protect the chain from attack. What kind of attack is possible?
+* Explain how proof of work functions. How does it operate. How does this protect the chain from attack. What kind of attack is possible?
+A: Proof of work is the the algorithm used to confirm transactions and and create new blocks in the chain. It is dependent on the number of users. The hash of each block contains the hash of the previous block, which increases security and prevents any block violation. When a block is mined, it is added to the chain. If it is a valid solution, the node will hash the previous block and add it to the new block along with its properties. 
 
 ## Project Set Up
 
